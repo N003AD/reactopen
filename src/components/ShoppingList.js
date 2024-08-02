@@ -6,16 +6,14 @@ const plantList = [
     'palmier'
 ]
 
-  /* const numbers = [1, 2, 3, 4]
-   const doubles = numbers.map(x => x * 2) // [2, 4, 6, 8] */
-   
+   //
    function ShoppingList() {
     return (
         <ul>
-            {plantList.map((plant) => (
-                <li>{plant}</li>
+            {plantList.map((plant, index) => (
+                <li key={`${plant}-${index}`}>{ plant }</li>
             ))}
-        </ul> 
+        </ul>
     )
 }
 
